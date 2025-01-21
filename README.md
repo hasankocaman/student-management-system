@@ -1,6 +1,6 @@
 # Student Management System
 
-A full-stack web application for managing student information using Spring Boot and React.
+A modern web application for managing student information, built with Spring Boot and React.
 
 ## Project Structure
 
@@ -17,14 +17,35 @@ fullstack-cursor-project/
     └── README.md         # Backend documentation
 ```
 
+## Technologies Used
+
+### Backend
+- Java 17
+- Spring Boot 3.2.1
+- Spring Data JPA
+- PostgreSQL 17
+- Swagger UI for API documentation
+
+### Frontend
+- React 18
+- React Router DOM
+- Axios for API calls
+- Bootstrap for styling
+
 ## Prerequisites
 
-- Node.js (v14 or higher)
-- Java JDK 17 or higher
+Before running the application, make sure you have the following installed:
+- Java Development Kit (JDK) 17
+- Node.js and npm
+- PostgreSQL 17
 - Maven
-- MySQL (or your preferred database)
 
 ## Getting Started
+
+### Database Setup
+1. Install PostgreSQL 17
+2. Create a database named `studentdb`
+3. Update database configuration in `application.properties` if needed
 
 ### Backend Setup
 
@@ -33,17 +54,11 @@ fullstack-cursor-project/
    cd student-service
    ```
 
-2. Install dependencies and build:
-   ```bash
-   mvn clean install
-   ```
-
-3. Run the application:
+2. Install dependencies and run:
    ```bash
    mvn spring-boot:run
    ```
-
-The backend server will start on http://localhost:8080
+The backend server will start on port 8081.
 
 ### Frontend Setup
 
@@ -57,42 +72,26 @@ The backend server will start on http://localhost:8080
    npm install
    ```
 
-3. Copy .env.example to .env and configure environment variables:
-   ```bash
-   cp .env.example .env
-   ```
-
-4. Start the development server:
+3. Start the development server:
    ```bash
    npm start
    ```
+The frontend application will start on port 3000.
 
-The frontend application will start on http://localhost:3000
+## API Documentation
+
+Once the backend is running, you can access the Swagger UI documentation at:
+```
+http://localhost:8081/swagger-ui.html
+```
 
 ## Features
 
-- Student CRUD operations
-- Real-time form validation
-- Responsive design
-- Error handling
-- Loading states
-- Toast notifications
-
-## Technologies Used
-
-### Frontend
-- React
-- Material-UI
-- React Router
-- Axios
-- React Toastify
-
-### Backend
-- Spring Boot
-- Spring Data JPA
-- Spring Security (planned)
-- MySQL
-- Maven
+- View list of all students
+- Add new student
+- Update existing student information
+- Delete student records
+- View detailed student information
 
 ## Contributing
 
